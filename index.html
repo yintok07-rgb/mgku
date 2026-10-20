@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday 💙</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Georgia,serif;color:#f5f5ff;
+  background:linear-gradient(160deg,#182d4d,#071326 55%,#020711);
+  min-height:100vh;
+}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0;
+background-image:radial-gradient(#fff 1px,transparent 1px);
+background-size:37px 37px;opacity:.22}
+.app{position:relative;z-index:1;width:100%;max-width:450px;
+min-height:100vh;margin:auto;padding:24px 20px;display:flex;
+flex-direction:column}
+.top{display:flex;justify-content:space-between;font-size:11px;
+letter-spacing:2px;color:#b9cce9;margin-bottom:20px}
+.progress{height:3px;background:#ffffff25;margin-bottom:22px}
+#bar{height:3px;width:11.11%;background:#b9d5ff;transition:.3s}
+.page{display:none;flex:1;min-height:65vh;flex-direction:column;
+align-items:center;justify-content:center;text-align:center;
+animation:fade .4s ease}
+.page.active{display:flex}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}
+to{opacity:1;transform:translateY(0)}}
+.tag{font-size:10px;letter-spacing:3px;color:#b5c9ec;margin-bottom:22px}
+h1{font-size:43px;line-height:1.15;margin-bottom:18px}
+h1 span{display:block;font-style:italic;color:#b8d2ff;font-size:32px}
+h2{font-weight:normal;font-style:italic;font-size:27px;margin:15px 0}
+p{font-size:15px;line-height:1.9;color:#d6e2f5}
+.heart{font-size:40px;margin-bottom:20px}
+.card{width:100%;padding:24px 18px;border:1px solid #a6c9ff40;
+border-radius:16px;background:linear-gradient(145deg,#17345aab,#07162de8);
+box-shadow:0 12px 40px #0003}
+.btn{border:1px solid #bdd6ff80;background:#17365d;color:white;
+border-radius:30px;padding:12px 23px;font-size:14px;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.navigation{display:flex;gap:12px;justify-content:center;
+margin-top:25px}
+.navigation .btn{flex:1;max-width:160px}
+#counter{text-align:center;font-size:11px;letter-spacing:2px;
+color:#a9c1e7;margin-top:16px}
+input,textarea{width:100%;margin:9px 0;padding:12px;
+border:1px solid #aecfff50;border-radius:8px;
+background:#08172d;color:white;font-family:inherit}
+textarea{height:100px;resize:vertical}
+.photo{width:100%;height:190px;object-fit:cover;
+border-radius:12px;margin:12px 0;border:1px solid #ffffff30}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gallery img{width:100%;height:145px;object-fit:cover;border-radius:9px}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);
+gap:5px;margin-top:15px;font-size:12px}
+.calendar span{padding:8px 0;background:#ffffff0d;border-radius:5px}
+.calendar .birthday{background:#527bb9;color:white}
+audio{width:100%;margin:18px 0}
+.song-cover{width:165px;height:165px;border-radius:50%;
+object-fit:cover;border:4px solid #a8c9ff80;
+box-shadow:0 0 30px #80aaff35;margin:18px auto}
+.small{font-size:12px;color:#a8bedf;margin-top:15px}
+</style>
+</head>
+
+<body>
+<div class="stars"></div>
+
+<main class="app">
+  <div class="top">
+    <span>OUR LITTLE UNIVERSE</span>
+    <span>♡ FOREVER</span>
+  </div>
+  <div class="progress"><div id="bar"></div></div>
+
+  <!-- 1. OPENING -->
+  <section class="page active">
+    <div class="heart">💌</div>
+    <p class="tag">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
+    <h1>Happy Birthday<span>MEGAA ARUMM</span></h1>
+    <p>Hari ini adalah tentang kamu, tentang senyummu,
+    dan semua hal indah yang pantas kamu dapatkan.</p>
+    <p class="small">Ada sesuatu yang ingin aku tunjukkan...</p>
+  </section>
+
+  <!-- 2. CALENDAR -->
+  <section class="page">
+    <p class="tag">SAVE THIS BEAUTIFUL DAY</p>
+    <h2>Special Calendar </h2>
+    <div class="card">
+      <p>HARI SPESIAL KAMU</p>
+      <p id="birthdayText">21 Oktober 2026</p>
+<div class="calendar" id="calendar"></div>
+      <p class="small">Hari kelahiran seseorang yang istimewa 💙libra</p>
+    </div>
+    <p class="small">Libra adalah pribadi yang cinta damai, adil, ramah, dan romantis, namun sering ragu-ragu dan menghindari konflik demi menjaga keseimbangan hidup serta keharmonisan hubungannya.</p>
+  </section>
+
+  <!-- 3. LAGU PERTAMA -->
+  <section class="page">
+    <p class="tag">A MELODY FOR YOU</p>
+    <h2>Special Song 🎶</h2>
+    <div class="card">
+      <img src="foto.jpg" class="song-cover" alt="Foto spesial"
+      onerror="this.style.display='none'">
+      <h2>Our Favorite Melody</h2>
+      <p>Lagu pertama untuk menemani hari spesialmu.</p>
+      <audio controls preload="metadata">
+        <source src="music.mp3" type="audio/mpeg">
+      </audio>
+      <p class="small">Play and enjoy this little moment ♡</p>
+    </div>
+  </section>
+
+  <!-- 4. LAGU KEDUA -->
+  <section class="page">
+    <p class="tag">ONE MORE SONG FOR YOU</p>
+    <h2>My Special Song 💙</h2>
+    <div class="card">
+      <div class="heart">🎧</div>
+      <h2>A Song Just for You</h2>
+      <p>Kalau aku bisa mengirimkan perasaanku lewat lagu,
+      mungkin lagu ini yang akan aku pilih.</p>
+      <audio controls preload="metadata">
+        <source src="music1.mp3" type="audio/mpeg">
+      </audio>
+      <p class="small">Listen with all your heart ♡</p>
+    </div>
+  </section>
+
+  <!-- 5. GREETING -->
+  <section class="page">
+    <p class="tag">A LITTLE GREETING</p>
+    <h2>A Greeting For You 💌</h2>
+    <div class="card">
+      <div class="heart">💙</div>
+      <p>Selamat ulang tahun, seseorang yang istimewa.
+      Terima kasih sudah menjadi dirimu sendiri.
+      Semoga hari ini dipenuhi tawa, kebahagiaan,
+      dan orang-orang yang menyayangimu.</p>
+    </div>
+  </section>
+
+  <!-- 6. WISHES -->
+  <section class="page">
+    <p class="tag">FROM THE BOTTOM OF MY HEART</p>
+    <h2>My Wishes for You ✨</h2>
+    <div class="card">
+      <p>Semoga semua impianmu perlahan menjadi nyata.</p>
+      <p>Semoga kamu selalu diberi kesehatan dan ketenangan.</p>
+      <p>Semoga langkahmu dipermudah dan rezekimu diluaskan.</p>
+      <p> semoga kamu selalu punya alasan untuk tersenyum.</p>
+      <p> Dan semoga kamu memiliki hubungan yang baik.</p>
+    
+      <div class="heart" style="margin-top:20px">🌙</div>
+    </div>
+  </section>
+
+  <!-- 7. GALLERY -->
+  <section class="page">
+    <p class="tag">MEMORIES TO KEEP</p>
+    <h2>Photo Gallery 📸</h2>
+    <div class="card">
+      <div class="gallery">
+        <img src="foto1.jpg" alt="Kenangan 1">
+        <img src="foto2.jpg" alt="Kenangan 2">
+        <img src="foto3.jpg" alt="Kenangan 3">
+        <img src="foto4.jpg" alt="Kenangan 4">
+      </div>
+      <p class="small">Setiap foto menyimpan cerita tersendiri ♡</p>
+    </div>
+  </section>
+
+  <!-- 8. REMINDER -->
+  <section class="page">
+    <p class="tag">PLEASE REMEMBER THIS</p>
+    <h2>A Little Reminder 🌙</h2>
+    <div class="card">
+      <div class="heart">⭐</div>
+      <p>Kamu tidak harus selalu kuat setiap waktu.</p>
+      <p>Tidak apa-apa beristirahat ketika lelah.</p>
+      <p>Jangan lupa menghargai dirimu sendiri,
+      sebab kamu juga layak mendapatkan kebahagiaan.</p>
+      <p class="small">Take care of yourself, always.</p>
+    </div>
+  </section>
+
+  <!-- 9. MESSAGE -->
+  <section class="page">
+    <p class="tag">A MESSAGE FROM ME TO YOU</p>
+    <h2>Message for You 💌</h2>
+    <div class="card">
+      <p>Kalau ada sesuatu yang ingin kamu sampaikan,
+      tuliskan di bawah ini.</p>
+      <textarea id="message" placeholder="Tulis pesanmu di sini..."></textarea>
+      <button class="btn" onclick="saveMessage()">Simpan Pesan ♡</button>
+      <p id="saved" class="small"></p>
+    </div>
+  </section>
+
+  <!-- 10. CLOSING -->
+  <section class="page">
+    <div class="heart">🎂</div>
+    <p class="tag">UNTIL ANOTHER BEAUTIFUL DAY</p>
+    <h1>Thank You<span>For Being You</span></h1>
+    <p>Semoga tahun ini membawa banyak cerita indah,
+    kesempatan baru, dan kebahagiaan yang tidak ada habisnya.</p>
+    <h2 style="margin-top:25px">Happy Birthday 💙</h2>
+    <p class="small">Made with love, just for you.</p>
+    <button class="btn" onclick="restart()">Ulangi dari Awal ↻</button>
+  </section>
+
+  <div class="navigation">
+    <button class="btn" id="back" onclick="move(-1)">← Kembali</button>
+    <button class="btn" id="next" onclick="move(1)">Selanjutnya →</button>
+  </div>
+  <div id="counter">01 / 10</div>
+</main>
+
+<script>
+const pages = document.querySelectorAll('.page');
+const bar = document.getElementById('bar');
+const back = document.getElementById('back');
+const next = document.getElementById('next');
+const counter = document.getElementById('counter');
+let current = 0;
+
+function showPage(index) {
+  current = Math.max(0, Math.min(index, pages.length - 1));
+
+  pages.forEach((page, i) => {
+    page.classList.toggle('active', i === current);
+  });
+
+  bar.style.width = ((current + 1) / pages.length * 100) + '%';
+  counter.textContent =
+    String(current + 1).padStart(2, '0') + ' / ' +
+    String(pages.length).padStart(2, '0');
+
+  back.style.visibility = current === 0 ? 'hidden' : 'visible';
+  next.style.display =
+    current === pages.length - 1 ? 'none' : 'block';
+
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function move(direction) {
+  showPage(current + direction);
+}
+
+function restart() {
+  showPage(0);
+}
+
+function saveMessage() {
+  const message = document.getElementById('message').value.trim();
+  const output = document.getElementById('saved');
+
+  if (!message) {
+    output.textContent = 'Tulis pesan terlebih dahulu ya 💙';
+    return;
+  }
+
+  output.textContent = 'Pesan tersimpan di halaman ini: ' + message;
+}
+
+const dateInput = document.getElementById('birthdayDate');
+const calendar = document.getElementById('calendar');
+
+function drawCalendar(dateString) {
+  calendar.innerHTML = '';
+
+  if (!dateString) return;
+
+  const parts = dateString.split('-').map(Number);
+  const year = parts[0];
+  const month = parts[1] - 1;
+  const day = parts[2];
+
+  const firstDay = new Date(year, month, 1).getDay();
+  const days = new Date(year, month + 1, 0).getDate();
+
+  ['M','S','S','R','K','J','S'].forEach((d, i) => {
+    const span = document.createElement('span');
+    span.textContent = ['M','S','R','K','J','S','M'][i];
+    calendar.appendChild(span);
+  });
+
+  const offset = (firstDay + 6) % 7;
+
+  for (let i = 0; i < offset; i++) {
+    calendar.appendChild(document.createElement('span'));
+  }
+
+  for (let d = 1; d <= days; d++) {
+    const span = document.createElement('span');
+    span.textContent = d;
+    if (d === day) span.classList.add('birthday');
+    calendar.appendChild(span);
+  }
+}
+
+dateInput.addEventListener('change', () => {
+  drawCalendar(dateInput.value);
+});
+
+showPage(0);
+</script>
+</body>
+</html>
